@@ -12,6 +12,11 @@ export const Container = styled.div`
 
     background-color: ${({theme}) => theme.COLORS.DARK_700};
 
+    animation-name: appearing;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+
     /*------------- DESKTOP -------------- */
     @media(min-width: 770px) {
         display: flex;
@@ -19,6 +24,10 @@ export const Container = styled.div`
         gap: 30px;
 
         padding: 0 75px;
+    }
+
+    @media(min-width: 1300px) {
+        padding: 0 93px;
     }
 
     @media(min-width: 2200px) {
@@ -88,8 +97,8 @@ export const Container = styled.div`
             border: none;
 
             >img {
-                width: 20px;
-                height: 20px;
+                width: 22px;
+                height: 22px;
 
                 @media(min-width: 2200px) {
                     width: 26px;
@@ -107,9 +116,11 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
 
-        background-color:  ${({theme}) => theme.COLORS.TOMATO_100};
+        background: linear-gradient(to right, ${({theme}) => theme.COLORS.TOMATO_100}, ${({theme}) => theme.COLORS.TOMATO_100});
 
         border-radius: 5px;
+
+        background-size: 200% 100%;
 
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
@@ -117,12 +128,28 @@ export const Container = styled.div`
         line-height: 24px;
         color: ${({theme}) => theme.COLORS.LIGHT_100};
 
+        cursor: pointer;
+
+        transition: filter 0.6s;
+
+        :hover { 
+            filter: brightness(0.7);
+        }
+
         @media(min-width: 2200px) {
             height: 60px;
             font-size:18px;
         }
     }
 
+@keyframes appearing {
+    0% {
+       filter: opacity(0);
+    }
 
+    100% {
+        filter: opacity(1);
+    }
+}
 
 `
