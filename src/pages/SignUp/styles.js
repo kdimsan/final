@@ -136,5 +136,8 @@ export const Form = styled.form`
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
+        text-decoration: none;
+
+        cursor: pointer;
     }
 `

@@ -116,6 +116,8 @@ export const Form = styled.form`
 
         background-color:${({theme}) => theme.COLORS.TOMATO_100} ;
 
+        cursor: pointer;
+
         @media(min-width: 850px) {
             margin: 0;
             margin-bottom: 32px;
@@ -135,5 +137,8 @@ export const Form = styled.form`
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
+        text-decoration: none;
+
+        cursor: pointer;
     }
 `

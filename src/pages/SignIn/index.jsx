@@ -1,11 +1,11 @@
 import { Container, Form } from "./styles"
 import { Logo } from "../../components/logo"
+import { Link } from "react-router-dom";
 
 export function SignIn() { 
     return(
         <Container>
             <Logo />
-
             <Form >
                 <h2>Faça Login</h2>
 
@@ -17,11 +17,8 @@ export function SignIn() {
 
                 <button>Entrar</button>
 
-                <a>Criar uma conta</a>
-            </Form>
-            
-            
-            
+                <Link to="/register">Criar uma conta</Link>
+            </Form>  
         </Container>
     )
 }

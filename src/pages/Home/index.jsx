@@ -19,7 +19,5 @@ export function Home() {
             <ProductCard />
             <Footer />
         </Container>
-
-        
     )
 }

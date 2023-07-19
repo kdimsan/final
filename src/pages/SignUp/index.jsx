@@ -1,5 +1,6 @@
-import { Container, Form } from "./styles"
-import { Logo } from "../../components/logo"
+import { Container, Form } from "./styles";
+import { Logo } from "../../components/logo";
+import { Link } from "react-router-dom";
 
 export function SignUp() { 
     return(
@@ -20,7 +21,7 @@ export function SignUp() {
 
                 <button>Entrar</button>
 
-                <a>Já tenho uma conta</a>
+                <Link to="/">Já tenho uma conta</Link>
             </Form>
             
             
