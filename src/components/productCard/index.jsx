@@ -17,7 +17,7 @@ export function ProductCard() {
     };
 
     return(
-        <Container>
+        <Container to= "/prato">
             <img src="src/assets/product.png" alt="Foto do produto" />
             <h5>Salada Ravanello</h5>
             <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>

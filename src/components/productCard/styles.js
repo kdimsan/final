@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom"
 
-export const Container = styled.div`
+export const Container = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    text-decoration: none;
 
     position: relative;
     
@@ -47,6 +50,7 @@ export const Container = styled.div`
         font-family: 'Poppins', sans-serif;
         font-size: 15px;
         font-weight: 400;
+        color: ${({theme}) => theme.COLORS.LIGHT_400};
 
         @media(min-width: 770px) {
             font-size: clamp(16px, 2vw, 24px);

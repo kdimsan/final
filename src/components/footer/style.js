@@ -21,6 +21,7 @@ export const Container = styled.div`
 
     @media(min-width: 770px) {
         justify-content: space-around;
+        margin-top: 60px;
     }
 
     > p {
