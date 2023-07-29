@@ -87,6 +87,7 @@ export const Container = styled.div`
 
     >button {
         display: none;
+        cursor: pointer;
 
         @media(min-width: 770px) {
             display: flex;
