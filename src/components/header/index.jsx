@@ -9,7 +9,7 @@ import OrderMobile from "../../assets/ordersMobile.svg"
 export function Header() {
 
     const { signOut } = useAuth();
-    
+
     return(
         <Container> 
             <img src={ Menu } alt="Menu" />

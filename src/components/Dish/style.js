@@ -101,6 +101,7 @@ export const Selector = styled.div`
     }
    
     > button {
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -125,6 +126,8 @@ export const IncludeButton = styled.div`
 
     background-color: ${({theme}) => theme.COLORS.TOMATO_100};
     border-radius: 5px;
+
+    cursor: pointer;
     @media(min-width: 900px) {
         margin-left: 30px;
     }

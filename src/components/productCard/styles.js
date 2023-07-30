@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom"
 
-export const Container = styled(Link)`
+export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,57 +39,7 @@ export const Container = styled(Link)`
         
     }
 
-    > img:nth-child(1) {
-        height: 88px;
-        width: 88px;
-
-        margin: 24px 0 12px;
-    }
-
-    > h5 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-        color: ${({theme}) => theme.COLORS.LIGHT_400};
-
-        @media(min-width: 770px) {
-            font-size: clamp(16px, 2vw, 24px);
-            font-weight: 600;
-            line-height: 56px;
-        }
-    }
-
-    > p {
-        display: none;
-
-        @media(min-width: 770px) {
-            display: block;
-
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            text-align: center;
-            line-height: 20px;
-            color: ${({theme}) => theme.COLORS.LIGHT_400}
-        }
-
-        @media(min-width: 1300px) {
-            margin: 10px 0;
-        }
-    }
-
-    > h4 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        color: ${({theme}) => theme.COLORS.CAKE_200};
-
-        margin: 14px 0;
-
-        @media(min-width: 770px) {
-            font-size: clamp(16px, 2vw, 26px);
-        }
-        
-    }
+   
 
     > button {
         margin-bottom: 24px;
@@ -190,6 +140,65 @@ export const Selector = styled.div`
             font-size: 18px;
         }
     }
-
-
 ` 
+
+export const InfoContainer = styled(Link)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+
+    > img:nth-child(1) {
+            height: 88px;
+            width: 88px;
+
+            margin: 24px 0 12px;
+        }
+
+    > h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: ${({theme}) => theme.COLORS.LIGHT_400};
+
+            @media(min-width: 770px) {
+                font-size: clamp(16px, 2vw, 24px);
+                font-weight: 600;
+                line-height: 56px;
+            }
+        }
+
+        > p {
+            display: none;
+
+            @media(min-width: 770px) {
+                display: block;
+
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                text-align: center;
+                line-height: 20px;
+                color: ${({theme}) => theme.COLORS.LIGHT_400}
+            }
+
+            @media(min-width: 1300px) {
+                margin: 10px 0;
+            }
+        }
+
+        > h4 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: ${({theme}) => theme.COLORS.CAKE_200};
+
+            margin: 14px 0;
+
+            @media(min-width: 770px) {
+                font-size: clamp(16px, 2vw, 26px);
+            }
+            
+        }
+
+`

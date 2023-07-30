@@ -6,7 +6,7 @@ export function Footer() {
     return(
         <Container>
             <Logo >
-                <img src={LogoFooter} alt="Logo do footer" />
+                <img src={ LogoFooter } alt="Logo do footer" />
                 <h3>food explorer</h3>
             </Logo>
 

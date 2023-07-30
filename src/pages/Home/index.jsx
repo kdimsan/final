@@ -14,7 +14,6 @@ export function Home() {
                     <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                 </Text> 
             </Banner>
-
             <h2>Refeições</h2>
             <ProductCard />
             <Footer />

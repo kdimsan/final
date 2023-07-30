@@ -23,7 +23,7 @@ export function Dish() {
             <BackButton />
             <ProductContainer>
                 <ProductImage>
-                    <img width={264} height={264} src="src/assets/product.png" alt="Foto do produto" />
+                    <img width={ 264 } height={ 264 } src="src/assets/product.png" alt="Foto do produto" />
                 </ProductImage>
                 <ProductInfo>
                     <h2>Salada Ravanello</h2>
@@ -38,11 +38,11 @@ export function Dish() {
                         <Ingredient />
                     </IngredientsOrganizer>
                     <Selector>
-                        <button onClick={() => changeQuantity("subtraction")}> <img src={Minus} alt="Diminuir quantidade do produto" /> </button>
-                        <span>{itemQuantity}</span>
-                        <button onClick={() => changeQuantity("sum")}> <img src={Plus} alt="Adicionar produto" /> </button>
+                        <button onClick={() => changeQuantity("subtraction")}> <img src={ Minus } alt="Diminuir quantidade do produto" /> </button>
+                        <span>{ itemQuantity }</span>
+                        <button onClick={() => changeQuantity("sum")}> <img src={ Plus } alt="Adicionar produto" /> </button>
                         <IncludeButton> 
-                            <img src={Orders} alt="Incluir ao carrinho." />
+                            <img src={ Orders } alt="Incluir ao carrinho." />
                             <span>Incluir</span>
                             <span>R$ 25,00</span>
                         </IncludeButton>

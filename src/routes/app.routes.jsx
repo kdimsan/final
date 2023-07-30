@@ -7,9 +7,9 @@ import { Dishs } from "../pages/Dishs";
 export function AppRoutes() {
     return(
         <Routes>
-            <Route path="/" element= {<Home />} />
-            <Route path="/criarprato/:id" element = {<CreateDish />} />
-            <Route path="/prato" element = {<Dishs />} />
+            <Route path="/" element= { <Home /> } />
+            <Route path="/criarprato/:id" element = { <CreateDish /> } />
+            <Route path="/prato" element = { <Dishs /> } />
         </Routes>
     )
 }
