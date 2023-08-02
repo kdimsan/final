@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { api } from "../../../services/api";
+import { useNavigate } from "react-router-dom";
+
 import { Container, Form, ImageContainer, ImageUploader, NameContainer, CategoryContainer, IngredientsContainer, PriceContainer, DescriptionContainer, Organizer } from "./style";
 import { BackButton } from "../../../components/backButton";
 import { Header } from "../../../components/admin/header";
@@ -11,6 +14,53 @@ import Upload from "../../../assets/upload.svg";
 
 export function CreateDish() {
 
+    const [name, setName] = useState("");
+    const [category, setCategory] = useState("");
+    const [price, setPrice] = useState("");
+    const [description, setDescription] = useState("");
+
+    const [tags, setTags] = useState([]);
+    const [newTag, setNewTag] = useState("");
+
+    function handleAddTag() {
+        setTags(prevState => [...prevState, newTag]);
+        setNewTag("");
+    }
+
+    function handleRemoveTag(tagDeleted) {
+        setTags(prevState => prevState.filter(tag => tag !== tagDeleted));
+    }
+
+    const navigate = useNavigate()
+
+   async function handlePlateCreate() {
+    if(!name || !category || !price || !description || !tags) {
+        return alert("Há campos não preenchidos, favor preencha todos.");
+    }
+
+    if(newTag) {
+        return alert("Há ingredientes que não foram adicionados, favor clicar para adicionar.");
+    }
+    await api.post("/pratos", {
+        name,
+        category,
+        price,
+        description,
+        ingredients: tags
+    })
+    .then(() =>{
+        alert("Prato criado com sucesso.")
+        navigate("/")
+    })
+    .catch(error => {
+        if(error.response) {
+            alert(error.response.data.message);
+        } else {
+            alert("Não foi possível realizar o cadastro.");
+        }
+     });
+    };
+    
     return(
         <Container>
             <Header />
@@ -24,6 +74,7 @@ export function CreateDish() {
                         <input 
                             type="file"
                             id="image"
+                            
                         />
                         <span>Selecione imagem</span>
                     </ImageUploader>
@@ -35,30 +86,43 @@ export function CreateDish() {
                         type="text"
                         id="name"
                         placeholder="Ex.: Salada Ceasar"
-                        
+                        onChange={e => setName(e.target.value)}
                     />
                 </NameContainer>
 
                 <CategoryContainer htmlFor="options">
                     <span>Categoria</span>
-                    <select id="options">
-                        <option value="meal">Refeição</option>
-                        <option value="main plate">Prato principal</option>
-                        <option value="drink">Bebidas</option>
+                    <select 
+                        onChange={e => setCategory(e.target.value)} 
+                        id="options">
+                            <option value=""></option>
+                            <option value="meal">Refeição</option>
+                            <option value="main plate">Prato principal</option>
+                            <option value="drink">Bebidas</option>
                     </select>
                 </CategoryContainer>
 
-                <IngredientsContainer htmlFor="Ingredients">  
+                <IngredientsContainer>  
                     <span>Ingredientes</span>
                     <Organizer>
-                        <Ingredients value={"Arroz"} />
-                        <Ingredients value={"Arroz"} />
-                        <Ingredients value={"Arroz"} />
-                        <Ingredients value={"Arroz"} />
-                        <Ingredients value={"Mandioca"} />
-                        <Ingredients placeholder={"Adicionar"} isNew/>
+                        {
+                            tags.map((tag, index) => (
+                                <Ingredients
+                                    key={ String(index) }
+                                    onClick={( ) => {handleRemoveTag(tag)}}
+                                    value={ tag }
+                                />
+                            ))
+                        }
+                        <Ingredients
+                            isNew
+                            placeholder={"Adicionar"}
+                            onClick={handleAddTag}
+                            
+                            onChange={e => setNewTag(e.target.value)}
+                            value={newTag}
+                        />
                     </Organizer>
-                       
                 </IngredientsContainer>
 
                 <PriceContainer htmlFor="price">
@@ -67,6 +131,7 @@ export function CreateDish() {
                         type="text"
                         id="price"
                         placeholder="R$ 00,00"
+                        onChange={e => setPrice(e.target.value)}
                         
                     />
                 </PriceContainer>
@@ -78,10 +143,10 @@ export function CreateDish() {
                         rows="5"
                         cols="40"
                         placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
-                        
+                        onChange={e => setDescription(e.target.value)}
                     />
                 </DescriptionContainer>
-            <SaveButton title="Salvar"/>
+            <SaveButton onClick={handlePlateCreate} title="Salvar"/>
             </Form>
             <Footer />
         </Container>

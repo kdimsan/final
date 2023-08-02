@@ -5,6 +5,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
+    gap: 4px;
 
     background-color: ${({theme, isNew}) => isNew ? "transparent" : theme.COLORS.DARK_1000};
     border-radius: 5px;
@@ -20,6 +21,9 @@ export const Container = styled.div`
         
         ::placeholder {
             color: ${({theme}) => theme.COLORS.LIGHT_500};
+        }
+        :focus {
+            outline: none;
         }
     }
 

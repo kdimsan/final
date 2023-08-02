@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { IngredientsOrganizer } from './../../../components/Dish/style';
 
 export const Container = styled.div`
     display: grid;
@@ -82,6 +81,11 @@ export const Form = styled.div`
         }
         >span {
             margin-bottom: 10px;
+        }
+        >input, textarea, select {
+            :focus {
+                outline: none;
+            }
         }
     }  
 `;
@@ -232,7 +236,7 @@ export const  Organizer= styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 
     width: 100%;
 
