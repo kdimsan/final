@@ -1,10 +1,11 @@
-import { Container } from "./styles"
-import { Logo } from "../logo"
-import { useAuth } from "../../hooks/auth";
+import { Link } from "react-router-dom";
 
-import Menu from "../../assets/menu.svg"
-import Logout from "../../assets/logout.svg"
-import OrderMobile from "../../assets/ordersMobile.svg"
+import { Container, HeaderContent } from "./style"
+import { useAuth } from "../../../hooks/auth";
+import { Logo } from "../logo"
+
+import Menu from "../../../assets/menu.svg"
+import Logout from "../../../assets/logout.svg"
 
 export function Header() {
 
@@ -12,11 +13,13 @@ export function Header() {
 
     return(
         <Container> 
+            <HeaderContent>
             <img src={ Menu } alt="Menu" />
             <Logo />
             <input type="text" placeholder="Busque por pratos ou ingredientes" />
-            <button> <img src={ OrderMobile } alt="Pedidos" />Pedidos</button>
+            <Link to={ "/pratos" }>Novo prato</Link>
             <button onClick={ signOut }><img src={ Logout } alt="Sair da conta" /></button>
+            </HeaderContent>
         </Container>
     )
 }

@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 export const Container = styled(Link)`
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
 
-    margin: 20px 20px 0;
+    width: 90%;
+
+    margin: 20px 28px 0;
 
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -14,11 +16,16 @@ export const Container = styled(Link)`
     color: ${({theme}) => theme.COLORS.LIGHT_300};
 
     cursor: pointer;
-        
-    @media(min-width: 770px) {
-        font-weight: 600;
-        margin: 24px 40px 0;
-    }
     
+    @media(min-width: 770px) {
+        margin: 40px 44px 0;
+    }
 
+    @media(min-width: 1024px) {
+        margin: 40px 100px 0;
+    }
+
+    @media(min-width: 1200px) {
+        margin: 40px 124px 0;
+    }
 `;

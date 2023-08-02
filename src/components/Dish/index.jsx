@@ -1,11 +1,11 @@
 import { Container, ProductContainer, ProductImage, ProductInfo, IngredientsOrganizer, Selector, IncludeButton } from "./style";
 
 import React, { useState } from "react";
-import { Ingredient } from "../Ingredient";
 import { BackButton } from "../backButton";
 import Minus from "../../assets/minus.svg"
 import Plus from "../../assets/plus.svg"
 import Orders from "../../assets/ordersMobile.svg"
+import { Ingredients } from './../admin/Ingredients/index';
 
 
 export function Dish() {
@@ -29,13 +29,13 @@ export function Dish() {
                     <h2>Salada Ravanello</h2>
                     <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis minima voluptate laboriosam neque beatae dignissimos illum dicta fuga itaque. Ad voluptates excepturi aliquid repudiandae tempore rerum accusamus et modi?.</p>
                     <IngredientsOrganizer>
-                        <Ingredient />
-                        <Ingredient />
-                        <Ingredient />
-                        <Ingredient />
-                        <Ingredient />
-                        <Ingredient />
-                        <Ingredient />
+                        <Ingredients />
+                        <Ingredients />
+                        <Ingredients />
+                        <Ingredients />
+                        <Ingredients />
+                        <Ingredients />
+                        <Ingredients />
                     </IngredientsOrganizer>
                     <Selector>
                         <button onClick={() => changeQuantity("subtraction")}> <img src={ Minus } alt="Diminuir quantidade do produto" /> </button>
