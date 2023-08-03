@@ -11,10 +11,9 @@ export const Container = styled.div`
 
     position: relative;
     
-    width: 190px;
+    min-width: 190px;
     height: 310px;
 
-    margin: 10px 22px;
 
     background-color: ${({theme}) => theme.COLORS.DARK_200};
     border-radius: 8px;
@@ -26,27 +25,21 @@ export const Container = styled.div`
     animation-fill-mode: backwards;
 
     @media(min-width: 400px) {
-        width: 210px;
-
-        margin: 10px 26px;
+        min-width: 210px;
+        max-width: 210px;
     }
 
     @media(min-width: 770px) {
-        width: 254px;
+        min-width: 254px;
+        max-width: 254px;
         height: 432px;
+        
         padding: 20px;
-
-        margin: 10px 50px;
     }
 
     @media(min-width: 1024px) {
-        margin: 10px 110px;
-    }
-
-    @media(min-width: 1200px) {
-        width: 304px;
-        
-        margin: 10px 134px;
+        min-width: 304px;
+        max-width: 304px;
     }
 
     >img:last-child {
@@ -73,7 +66,6 @@ export const InfoContainer = styled(Link)`
     flex-direction: column;
     align-items: center;
     
-
     text-decoration: none;
 
     > img:nth-child(1) {

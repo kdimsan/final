@@ -81,7 +81,7 @@ export const Form = styled.div`
 
         >input, textarea, select {
             :focus {
-                outline: 2px solid ${({theme}) => theme.COLORS.DARK_1000};
+                outline: 2px solid ${({theme}) => theme.COLORS.LIGHT_500};
             }
         }
 

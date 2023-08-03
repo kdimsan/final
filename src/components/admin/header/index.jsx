@@ -7,7 +7,9 @@ import { Logo } from "../logo"
 import Menu from "../../../assets/menu.svg"
 import Logout from "../../../assets/logout.svg"
 
-export function Header() {
+import Magnifier from "../../../assets/magnifier.svg"
+
+export function Header({ onChange }) {
 
     const { signOut } = useAuth();
 
@@ -16,7 +18,14 @@ export function Header() {
             <HeaderContent>
             <img src={ Menu } alt="Menu" />
             <Logo />
-            <input type="text" placeholder="Busque por pratos ou ingredientes" />
+            <div className="input-wrapper">
+                <button> <img src={Magnifier} alt="Buscar" /></button>
+                <input
+                    type="text" 
+                    placeholder="Busque por pratos ou ingredientes"
+                    onChange={onChange}
+                />
+            </div>
             <Link to={ "/pratos" }>Novo prato</Link>
             <button onClick={ signOut }><img src={ Logout } alt="Sair da conta" /></button>
             </HeaderContent>

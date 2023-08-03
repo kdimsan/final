@@ -1,22 +1,51 @@
-import { Container, Banner, BannerText } from "./style"
-import { Header } from "../../../components/admin/header"
-import { ProductCard } from "../../../components/admin/productCard"
-import { Footer } from "../../../components/footer"
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { Container, PlatesOrganizer } from "./style";
+
+import { Header } from "../../../components/admin/header";
+import { Banner } from "../../../components/banner";
+import { ProductCard } from "../../../components/admin/productCard";
+import { Footer } from "../../../components/footer";
+
+import { api } from "../../../services/api";
 
 export function Home() {
+    const [search, setSearch] = useState("");
+    const [plates, setPlates] = useState([]);
+
+    const navigate = useNavigate();
+
+   useEffect(() => {
+        async function fetchPlates() {
+            const response = await api.get(`/pratos?name=${ search }`);
+            setPlates(response.data);
+        }
+        fetchPlates();
+   }, [search]);
+
+   function handlePlateDetail(id) {
+        navigate(`/detalhes/${id}`);
+   }
+
     return(
         <Container>
-            <Header />
-            <Banner>
-                <img src="src/assets/macaroons.png" alt="Macaroons" />
-                <img src="src/assets/macaroonsDesktop.png" alt="Macaroons" />
-                <BannerText>
-                    <h3>Sabores inigualáveis</h3>
-                    <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
-                </BannerText> 
-            </Banner>
+            <Header
+                onChange={e => setSearch(e.target.value)}
+             />
+            <Banner />
             <h2>Refeições</h2>
-            <ProductCard />
+            <PlatesOrganizer>
+                {
+                    plates.map(plate => (
+                    <ProductCard 
+                    key={String(plate.id)}
+                    data={plate}
+                    onClick={() => handlePlateDetail(plate.id)}
+                    />
+                    ))
+                }
+            </PlatesOrganizer>
             <Footer />
         </Container>
     )

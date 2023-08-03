@@ -2,16 +2,14 @@ import { Container, InfoContainer } from "./style"
 
 import Edit from "../../../assets/edit.svg"
 
-export function ProductCard() {
-
-
+export function ProductCard({ data, onClick}) {
     return(
-        <Container>
-            <InfoContainer to= "/prato">
+        <Container onClick={onClick}>
+            <InfoContainer>
             <img src="src/assets/product.png" alt="Foto do produto" />
-            <h5>Salada Ravanello</h5>
-            <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>
-            <h4>R$ 49,97</h4>
+            <h5 data={data.name}>{data.name}</h5>
+            <p data={data.description}>{data.description}</p>
+            <h4 data={data.price}>R${data.price}</h4>
             </InfoContainer>
             <img src={ Edit } alt="Adicionar aos favoritos" />
         </Container>

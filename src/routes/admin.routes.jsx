@@ -9,7 +9,7 @@ export function AdminRoutes() {
         <Routes>
             <Route path="/" element= { <Home /> } />
             <Route path="/pratos" element = { <CreateDish /> } />
-            <Route path="/prato" element = { <Dishs /> } />
+            <Route path="/detalhes/:id" element = { <Dishs /> } />
         </Routes>
     )
 }
