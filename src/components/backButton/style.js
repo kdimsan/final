@@ -6,7 +6,7 @@ export const Container = styled(Link)`
     align-items: center;
     gap: 7px;
 
-    width: 90%;
+    width: fit-content;
 
     margin: 20px 28px 0;
 

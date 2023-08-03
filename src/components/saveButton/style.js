@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.button`
     
-    padding: 12px;
+    padding: 12px 24px;
 
     font-family: 'Poppins', sans-serif;
     font-size: 14px;

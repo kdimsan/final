@@ -72,7 +72,12 @@ export const HeaderContent = styled.div`
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 16px;
-            color: ${({theme}) => theme.COLORS.LIGHT_500};   
+            color: ${({theme}) => theme.COLORS.LIGHT_500}; 
+            
+            :focus {
+                color: ${({theme}) => theme.COLORS.LIGHT_100};
+                outline: 2px solid ${({theme}) => theme.COLORS.DARK_1000};
+            }
         }
     }
 

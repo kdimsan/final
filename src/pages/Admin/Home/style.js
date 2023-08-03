@@ -154,7 +154,7 @@ export const Banner = styled.div`
     }  
 `
 
-export const Text = styled.div`
+export const BannerText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;

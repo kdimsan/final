@@ -12,7 +12,7 @@ export const Container = styled.div`
     border: ${({theme, isNew}) => isNew ? `1px dashed ${theme.COLORS.LIGHT_500}` : "none" };
 
     >input {
-        max-width: 120px;
+        max-width: 60px;
         
         background: none;
         border: none;
@@ -25,11 +25,18 @@ export const Container = styled.div`
         :focus {
             outline: none;
         }
+        @media(min-width: 1200px) {
+            max-width: 120px;
+        }
     }
 
     >button {
         background: none;
         border: none;
+
+        width: 15px;
+
+        cursor: pointer;
 
         >img {
             width: 8px;
