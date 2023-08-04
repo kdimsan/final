@@ -1,10 +1,13 @@
 import { Container , BannerText} from "./style";
 
+import bannerImageDesktop from "../../assets/macaroonsDesktop.png";
+import bannerImage from "../../assets/macaroons.png";
+
 export function Banner() {
     return(
     <Container>
-        <img src="src/assets/macaroons.png" alt="Macaroons" />
-        <img src="src/assets/macaroonsDesktop.png" alt="Macaroons" />
+        <img src={bannerImageDesktop} alt="Macaroons" />
+        <img src={bannerImage} alt="Macaroons" />
         <BannerText>
             <h3>Sabores inigualáveis</h3>
             <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
