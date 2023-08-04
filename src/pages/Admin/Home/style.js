@@ -42,7 +42,7 @@ export const PlatesOrganizer = styled.div`
     gap: 10px;
 
     margin: 10px 15px 20px 20px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     @media(min-width: 770px) {
         margin: 10px 15px 20px 44px;
