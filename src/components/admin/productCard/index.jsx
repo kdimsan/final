@@ -2,7 +2,7 @@ import { Container, InfoContainer } from "./style"
 
 import Edit from "../../../assets/edit.svg"
 
-export function ProductCard({ data, onClick}) {
+export function ProductCard({ data, onClick }) {
     return(
         <Container onClick={onClick}>
             <InfoContainer>

@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import { Container, Selector, InfoContainer } from "./styles"
-import Minus from "../../assets/minus.svg"
-import Plus from "../../assets/plus.svg"
-import Favorite from "../../assets/favorite.svg"
+import { Container, Selector, InfoContainer } from "./styles";
+import Minus from "../../assets/minus.svg";
+import Plus from "../../assets/plus.svg";
+import Favorite from "../../assets/favorite.svg";
+
+import { api } from "../../services/api";
 
 export function ProductCard() {
     const [itemQuantity, setItemQuantity] = useState(0);

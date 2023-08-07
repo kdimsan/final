@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     color: #fff;
 
-    > h2 {
+    >main {
+        flex: 1;
+        > h2 {
         font-family: 'Poppins', sans-serif;
         color: ${({theme}) => theme.COLORS.LIGHT_300};
         letter-spacing: 1.2px;
@@ -35,6 +38,7 @@ export const Container = styled.div`
             margin: 30px 124px 0;
         }
     }
+    }
 `;
  
 export const PlatesOrganizer = styled.div`
@@ -46,5 +50,9 @@ export const PlatesOrganizer = styled.div`
 
     @media(min-width: 770px) {
         margin: 10px 15px 20px 44px;
+    }
+
+    @media(min-width: 1200px) {
+        margin: 10px 15px 20px 124px;
     }
 `;

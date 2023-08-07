@@ -9,21 +9,20 @@ export const Container = styled.div`
     @media(min-width: 900px) {
         margin: 0 100px;
     }
-`;
 
-export const ProductContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    >main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    margin: 20px 20px;
+        margin: 20px 20px;
 
-    @media(min-width: 770px) {
-        flex-direction: row;
-        min-height: 50vh;
+        @media(min-width: 770px) {
+            flex-direction: row;
+            min-height: 50vh;
+        }
     }
-
 `;
 
 export const ProductImage = styled.div`
@@ -104,6 +103,7 @@ export const IngredientsOrganizer = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     margin-bottom: 20px;
 
@@ -111,7 +111,22 @@ export const IngredientsOrganizer = styled.div`
         justify-content: start;
         margin-bottom: 30px;
     }
+    >span {
+        padding: 5px 8px;
+
+        background-color: ${({theme}) => theme.COLORS.DARK_1000};
+        border-radius: 5px;
+        
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: ${({theme}) => theme.COLORS.LIGHT_100};
+
+        @media(min-width: 1200px) {
+            font-size: 16px;
+        }
+    }
 `;
+
 export const Selector = styled.div`
     display: flex;
     align-items: center;

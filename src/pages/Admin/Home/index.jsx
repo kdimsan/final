@@ -15,6 +15,10 @@ export function Home() {
   const [plates, setPlates] = useState([]);
 
   const navigate = useNavigate();
+  
+  function handlePlateDetail(id) {
+    navigate(`/pratos/${id}`);
+  }
 
   useEffect(() => {
     async function fetchPlates() {
@@ -24,25 +28,24 @@ export function Home() {
     fetchPlates();
   }, [search]);
 
-  function handlePlateDetail(id) {
-    navigate(`/detalhes/${id}`);
-  }
   return (
     <Container>
       <Header onChange={(e) => setSearch(e.target.value)} />
-      <Banner />
-      <h2>Refeições</h2>
-      <PlatesOrganizer>
-        {plates.map((plate) => (
-            console.log("esse é um plate",plate), /* fazer o map para pegar todos os plates, e aí fazer um filter para pegar o plate.category e colocar 
-            cada um em seu lugar de categoria. */
-          <ProductCard
-            key={String(plate.id)}
-            data={plate}
-            onClick={() => handlePlateDetail(plate.id)}
-          />
-        ))}
-      </PlatesOrganizer>
+      <main>
+        <Banner />
+        <h2>Refeições</h2>
+        <PlatesOrganizer>
+          {plates.map((plate) => (
+              console.log("esse é um plate",plate), /* fazer o map para pegar todos os plates, e aí fazer um filter para pegar o plate.category e colocar 
+              cada um em seu lugar de categoria. */
+            <ProductCard
+              key={String(plate.id)}
+              data={plate}
+              onClick={() => handlePlateDetail(plate.id)}
+            />
+          ))}
+        </PlatesOrganizer>
+      </main>
       <Footer />
     </Container>
   );

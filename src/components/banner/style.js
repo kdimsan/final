@@ -129,11 +129,11 @@ export const BannerText = styled.div`
 
 
    @media(min-width: 320px) {
-        margin-left: -50px;
+        margin-left: -80px;
    }
 
    @media(min-width: 380px) {
-        margin-left: 0;
+        margin-left: -20px;
    }
 
     > h3 {
