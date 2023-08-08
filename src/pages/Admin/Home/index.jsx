@@ -36,12 +36,12 @@ export function Home() {
         <h2>Refeições</h2>
         <PlatesOrganizer>
           {plates.map((plate) => (
-              console.log("esse é um plate",plate), /* fazer o map para pegar todos os plates, e aí fazer um filter para pegar o plate.category e colocar 
+               /* fazer o map para pegar todos os plates, e aí fazer um filter para pegar o plate.category e colocar 
               cada um em seu lugar de categoria. */
             <ProductCard
               key={String(plate.id)}
               data={plate}
-              onClick={() => handlePlateDetail(plate.id)}
+              onClick={ () => handlePlateDetail(plate.id) }
             />
           ))}
         </PlatesOrganizer>

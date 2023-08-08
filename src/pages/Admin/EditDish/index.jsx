@@ -69,15 +69,11 @@ export function EditDish() {
 
     return(
         <Container>
-
             <Header />
-
             <BackButton />
-
             {
             data &&
                 <main>
-
                     <h1>Editar prato</h1>
 
                     <Form>

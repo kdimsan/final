@@ -133,7 +133,7 @@ export const BannerText = styled.div`
    }
 
    @media(min-width: 380px) {
-        margin-left: -20px;
+        margin-left: -30px;
    }
 
     > h3 {
@@ -192,16 +192,6 @@ export const BannerText = styled.div`
         100%{
             transform: translateY(0);
         }
-    }
-
-    @keyframes appearing {
-        0% {
-        filter: opacity(0);
-        }
-
-        100% {
-            filter: opacity(1);
-        } 
     }
 
     @keyframes topdown {

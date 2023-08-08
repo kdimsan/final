@@ -12,7 +12,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.COLORS.DARK_700};
 
     animation-name: appearing;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-delay: 0.3s;
     animation-fill-mode: backwards;
 
@@ -52,59 +52,16 @@ export const HeaderContent = styled.div`
     @media(min-width: 1200px) {
         margin: 0 124px;
     }
-    .input-wrapper{
-        display: none;
-        
-        width: 100%;
-        
-        padding-left: 80px;
 
-        background-color: ${({theme}) => theme.COLORS.DARK_900};
-        border-radius: 8px;
-        @media(min-width: 770px) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-        }
-
-        >input { 
+    >:nth-child(3) {
+        @media(max-width: 769px) {
             display: none;
-    
-            @media(min-width: 770px) {
-                display: flex;
-                
-                width: 100%;
-                height: 48px;
-    
-                border: none;
-                border-radius: 5px;
-                background: none;
-    
-                font-family: 'Roboto', sans-serif;
-                font-weight: 400;
-                font-size: 16px;
-                color: ${({theme}) => theme.COLORS.LIGHT_500}; 
-                
-                :focus {
-                    color: ${({theme}) => theme.COLORS.LIGHT_100};
-                    outline: 2px solid ${({theme}) => theme.COLORS.LIGHT_500};
-                }
-            }
-        }
-        >button {
-            background: none;
-            border: none;
-
-            width: 28px;
-            height: 100%;
         }
     }
 
     >img {
         height: 20px;
         width: 20px;
-        
 
         @media(min-width: 350px) {
             height: 24px;
@@ -122,61 +79,16 @@ export const HeaderContent = styled.div`
         }
     }
 
-    >button {
-        display: none;
-        cursor: pointer;
-
-        @media(min-width: 770px) {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            background: none;
-            border: none;
-
-            >img {
-                width: 22px;
-                height: 22px;
-            }
-        }
-    }
     >a {
-        display: none;
-
-        width: 50%;
-        max-width: 216px;
-        height: 56px;
-
-        background: linear-gradient(to right, ${({theme}) => theme.COLORS.TOMATO_100}, ${({theme}) => theme.COLORS.TOMATO_100});
-
-        border-radius: 5px;
-
-        background-size: 200% 100%;
-
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        color: ${({theme}) => theme.COLORS.LIGHT_100};
-        text-decoration: none;
-
-        cursor: pointer;
-
-        transition: filter 0.6s;
-
-        :hover { 
-            filter: brightness(0.7);
-        }
-
-        @media(min-width: 770px) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media(min-width: 2200px) {
-            height: 60px;
-            font-size:18px;
+        @media(max-width: 769px) {
+            display: none;
         }
     }
+    
+    >button  {
+        @media(max-width: 769px) {
+            display: none;
+        }
+    }
+
 `;

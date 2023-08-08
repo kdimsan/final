@@ -10,34 +10,36 @@ export const Container = styled.div`
 
     >main {
         flex: 1;
+
         > h2 {
-        font-family: 'Poppins', sans-serif;
-        color: ${({theme}) => theme.COLORS.LIGHT_300};
-        letter-spacing: 1.2px;
+            font-family: 'Poppins', sans-serif;
+            color: ${({theme}) => theme.COLORS.LIGHT_300};
+            font-weight: 500;
+            letter-spacing: 1.2px;
 
-        margin: 30px 16px 0;
+            margin: 30px 16px 0;
 
-        animation-name: appearing;
-        animation-duration: 2s;
-        animation-delay: 1.5s;
-        animation-fill-mode: backwards;
+            animation-name: appearing;
+            animation-duration: 2s;
+            animation-delay: 1.5s;
+            animation-fill-mode: backwards;
 
-        @media(min-width: 400px) {
-            margin: 30px 20px 0;
+            @media(min-width: 400px) {
+                margin: 30px 20px 0;
+            }
+
+            @media(min-width: 770px) {
+                margin: 30px 44px 0;
+            }
+
+            @media(min-width: 1024px) {
+                margin: 30px 100px 0;
+            }
+
+            @media(min-width: 1200px) {
+                margin: 30px 124px 0;
+            }
         }
-
-        @media(min-width: 770px) {
-            margin: 30px 44px 0;
-        }
-
-        @media(min-width: 1024px) {
-            margin: 30px 100px 0;
-        }
-
-        @media(min-width: 1200px) {
-            margin: 30px 124px 0;
-        }
-    }
     }
 `;
  
