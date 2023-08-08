@@ -5,7 +5,7 @@ import { Container, HeaderContent } from "./style";
 
 import { useAuth } from "../../../hooks/auth";
 import { Logo } from "../logo";
-import { Sidebar } from "../../sideBar";
+import { Sidebar } from "../../sidebar";
 import { LogoutButton } from "../../logoutButton";
 import { NewDishButton } from "../../newDishButton";
 import { HeaderSearch } from "../../headerSearch";
