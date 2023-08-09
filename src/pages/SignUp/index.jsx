@@ -11,6 +11,10 @@ export function SignUp() {
 
     const navigate = useNavigate();
 
+    function handleAlredyHaveAccount() {
+        navigate(-1);
+    }
+
     function handleSignUp(e) {
         e.preventDefault();
         if(!name || !email || !password) {
@@ -20,7 +24,7 @@ export function SignUp() {
         api.post("/users", { name, email, password })
         .then(() => {
             alert("Cadastro realizado com sucesso!");
-            navigate("/");
+            navigate(-1);
         })
         .catch(error => {
             if(error.response) {
@@ -65,7 +69,7 @@ export function SignUp() {
 
                 <button onClick={handleSignUp}>Cadastrar</button>
 
-                <Link to="/">Já tenho uma conta</Link>
+                <a onClick={ () => handleAlredyHaveAccount() }>Já tenho uma conta</a>
             </Form>
             
             

@@ -6,7 +6,7 @@ import { Container, Form, ImageContainer, ImageUploader, NameContainer, Category
 
 import { Header } from "../../../components/admin/header";
 import { Footer } from "../../../components/footer";
-import { Ingredients } from "../../../components/admin/Ingredients";
+import { Ingredients } from "../../../components/admin/ingredients";
 import { SaveButton } from "../../../components/saveButton";
 import { BackButton } from "../../../components/backButton";
 

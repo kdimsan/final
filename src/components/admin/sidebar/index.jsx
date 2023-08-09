@@ -2,13 +2,13 @@ import { Container, SidebarHeader, Content } from "./style";
 
 import { useNavigate } from "react-router-dom";
 
-import { useAuth } from "../../hooks/auth";
-import { Footer } from "../footer";
-import { LogoutButton } from "../logoutButton";
+import { useAuth } from "../../../hooks/auth";
+import { Footer } from "../../footer";
+import { LogoutButton } from "../../logoutButton";
 import { NewDishButton } from "../newDishButton";
-import { HeaderSearch } from "../headerSearch";
+import { HeaderSearch } from "../../headerSearch";
 
-import closeButton from "../../assets/x.svg";
+import closeButton from "../../../assets/x.svg";
 
 export function Sidebar({ active, onChange } ) {
 

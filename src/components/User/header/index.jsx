@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Container, HeaderContent } from "./style";
 
 import { useAuth } from "../../../hooks/auth";
-import { Logo } from "../logo";
+import { Logo } from "../../logo";
 import { Sidebar } from "../sidebar";
 import { LogoutButton } from "../../logoutButton";
-import { NewDishButton } from "../newDishButton";
 import { HeaderSearch } from "../../headerSearch";
+import { Cart } from "../../cart";
 
 import Menu from "../../../assets/menu.svg";
 
@@ -25,10 +25,6 @@ export function Header({ onChange }) {
         setSideBar(!sideBar);
     }
 
-    function handleCreateDish() {
-        navigate("/pratos");
-    }
-
     return(
         <Container> 
             <HeaderContent>
@@ -36,7 +32,7 @@ export function Header({ onChange }) {
                 { sideBar && <Sidebar onChange={ onChange } active={setSideBar} /> } 
                 <Logo />
                 <HeaderSearch onChange={ onChange } />
-                <NewDishButton title="Novo prato" onClick={ () => handleCreateDish() } />
+                <Cart />
                 <LogoutButton onClick={ signOut } />
             </HeaderContent>
         </Container>

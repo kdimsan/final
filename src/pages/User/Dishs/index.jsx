@@ -1,8 +1,7 @@
 import { Container } from "./style";
-import { Header } from "../../components/header";
-import { Footer } from "../../components/footer";
-import { Dish } from "../../components/Dish";
-
+import { Header } from "../../../components/User/header";
+import { Footer } from "../../../components/footer";
+import { Dish } from "../../../components/User/dish";
 
 export function Dishs() {
     return(

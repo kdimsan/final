@@ -117,7 +117,5 @@ export const InfoContainer = styled(Link)`
             @media(min-width: 770px) {
                 font-size: clamp(16px, 2vw, 26px);
             }
-            
         }
-
 `
