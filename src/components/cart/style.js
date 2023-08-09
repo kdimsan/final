@@ -76,6 +76,7 @@ export const Container = styled.div`
         >span {
             font-family: 'Poppins', sans-serif;
             font-size: 14px;
+            color: ${({theme}) => theme.COLORS.LIGHT_100};
             white-space: nowrap;
 
         }

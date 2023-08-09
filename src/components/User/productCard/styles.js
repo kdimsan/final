@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"
 
 export const Container = styled.div`
     display: flex;
@@ -78,6 +77,8 @@ export const Container = styled.div`
     
     text-decoration: none;
 
+    cursor: pointer;
+
     > img:nth-child(1) {
             height: 88px;
             width: 88px;
@@ -98,7 +99,7 @@ export const Container = styled.div`
             }
         }
 
-        > p {
+    > p {
             display: none;
 
             @media(min-width: 770px) {
@@ -116,7 +117,7 @@ export const Container = styled.div`
             }
         }
 
-        > h4 {
+    > h4 {
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
             font-weight: 500;
@@ -154,6 +155,8 @@ export const Selector = styled.div`
     }
 
     >button {
+        height: 18px;
+
         display: flex;
         align-items: center;
         justify-content: center; 
