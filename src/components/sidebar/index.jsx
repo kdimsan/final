@@ -30,7 +30,6 @@ export function Sidebar({ active, onChange } ) {
                 <img onClick={ () => closeSideBar() } src={ closeButton } alt="Fechar" />
                 <span>Menu</span>
             </SidebarHeader>
-
             <Content>
                 <HeaderSearch onChange={ onChange } />
                 <NewDishButton title="Novo prato" onClick={ () => handleCreateDish() } />

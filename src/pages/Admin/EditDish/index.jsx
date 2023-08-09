@@ -53,7 +53,7 @@ export function EditDish() {
             tags: tagsToSend
         }).then(() => {
             alert("Atualizado com sucesso.");
-            navigate("/")
+            navigate(-1)
         });
     }
     
@@ -96,14 +96,14 @@ export function EditDish() {
                                 type="text"
                                 id="name"
                                 value={ dish.name }
-                                onChange={(e) => setDish({ ...dish, name: e.target.value })} 
+                                onChange={ (e) => setDish({ ...dish, name: e.target.value }) } 
                             />
                         </NameContainer>
 
                         <CategoryContainer htmlFor="options">
                             <span>Categoria</span>
                             <select 
-                                onChange={(e) => setDish({ ...dish, category: e.target.value })} 
+                                onChange={ (e) => setDish({ ...dish, category: e.target.value }) } 
                                 id="options">
                                     <option value=""></option>
                                     <option value="meal">Refeição</option>
@@ -119,8 +119,8 @@ export function EditDish() {
                                     tags.map((tag, index) => (
                                         <Ingredients 
                                             key={ String(index) }
-                                            value={tag.title }
-                                            onClick={( ) => {handleRemoveTag(tag)}}
+                                            value={ tag.title }
+                                            onClick={  () => {handleRemoveTag(tag)} }
                                         />
                                     ))
                                 }
@@ -129,8 +129,8 @@ export function EditDish() {
                                     isNew
                                     placeholder={"Adicionar"}
                                     onClick={handleAddTag}
-                                    onChange={e => setNewTag(e.target.value)}
-                                    value={newTag}
+                                    onChange={ e => setNewTag(e.target.value) }
+                                    value={ newTag }
                                 />
                             </div>
                         </IngredientsContainer>
@@ -155,11 +155,11 @@ export function EditDish() {
                                 rows="5"
                                 cols="40"
                                value={ dish.description }
-                               onChange={(e) => setDish({ ...dish, description: e.target.value })} 
+                               onChange={ (e) => setDish({ ...dish, description: e.target.value }) } 
                             />
                         </DescriptionContainer>
 
-                        <SaveButton onClick={() => handleUpdate()} title="Salvar prato"/>
+                        <SaveButton onClick={ () => handleUpdate() } title="Salvar prato"/>
                     </Form>
                 </main>
             }

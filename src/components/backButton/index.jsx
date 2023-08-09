@@ -8,10 +8,10 @@ export function BackButton() {
     const navigate = useNavigate();
 
     function handleBack() {
-        navigate("/");
+        navigate(-1);
     }
     return(
-        <Container onClick={handleBack}>
+        <Container onClick={ handleBack }>
             <img src={ back } alt="Voltar" />
             <span>Voltar</span>
         </Container>

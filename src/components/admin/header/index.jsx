@@ -21,18 +21,18 @@ export function Header({ onChange }) {
 
     const [sideBar, setSideBar] = useState(false);
 
-    function handleCreateDish() {
-        navigate("/pratos");
-    }
-
     function showSideBar() {
         setSideBar(!sideBar);
+    }
+
+    function handleCreateDish() {
+        navigate("/pratos");
     }
 
     return(
         <Container> 
             <HeaderContent>
-                <img onClick={() => showSideBar()} src={ Menu } alt="Menu" />
+                <img onClick={ () => showSideBar() } src={ Menu } alt="Menu" />
                 { sideBar && <Sidebar onChange={ onChange } active={setSideBar} /> } 
                 <Logo />
                 <HeaderSearch onChange={ onChange } />
