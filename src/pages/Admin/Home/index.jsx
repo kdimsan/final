@@ -22,7 +22,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchPlates() {
-      const response = await api.get(`/pratos?name=${search}`);
+      const response = await api.get(`/pratos?search=${search}`);
       setPlates(response.data);
     }
     fetchPlates();

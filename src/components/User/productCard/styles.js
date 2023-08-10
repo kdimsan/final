@@ -168,7 +168,7 @@ export const Selector = styled.div`
     }
 
     >button:last-child {
-        padding: 12px 24px;
+        padding: 20px 24px;
 
         background-color: ${({theme}) => theme.COLORS.TOMATO_100};
         border: none;
