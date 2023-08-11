@@ -12,8 +12,8 @@ export const Container = styled.div`
     border-radius: 5px;
 
     animation-name: appearing;
-    animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
     animation-fill-mode: backwards;
 
     @media(max-width: 319px) {
@@ -123,8 +123,8 @@ export const BannerText = styled.div`
     z-index: 1;
 
     animation-name: leftright;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
 
 
 
@@ -187,7 +187,7 @@ export const BannerText = styled.div`
 
     @keyframes leftright {
         0% {
-            transform: translateX(-25px);
+            transform: translateX(-40px);
         }
         100%{
             transform: translateY(0);

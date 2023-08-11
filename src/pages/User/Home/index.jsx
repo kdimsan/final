@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { Container, PlatesOrganizer } from "./styles";
 
@@ -14,12 +13,11 @@ import { api } from "../../../services/api";
 export function Home() {
     const [search, setSearch] = useState("");
     const [plates, setPlates] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
 
-    const navigate = useNavigate();
-  
-    function handlePlateDetail(id) {
-      navigate(`/pratos/${id}`);
-    }
+    const addToCart = (item) => {
+        setCartItems([...cartItems, item]);
+    };
 
     useEffect(() => {
         async function fetchPlates() {
@@ -31,7 +29,10 @@ export function Home() {
 
     return(
         <Container>
-           <Header onChange={(e) => setSearch(e.target.value)} />
+           <Header 
+                onChange={(e) => setSearch(e.target.value)} 
+                cartItems={ cartItems }
+            />
             <main>
             <Banner />
             <h2>Refeições</h2>
@@ -42,7 +43,8 @@ export function Home() {
                     <ProductCard
                         key={String(plate.id)}
                         data={plate}
-                        onClick={ () => handlePlateDetail(plate.id) }
+                        addToCart={ addToCart }
+                        cartItems={ cartItems }
                     />
                 ))}
             </PlatesOrganizer>

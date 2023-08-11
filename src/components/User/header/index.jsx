@@ -13,9 +13,7 @@ import { Cart } from "../../cart";
 import Menu from "../../../assets/menu.svg";
 
 
-export function Header({ onChange }) {
-
-    const navigate = useNavigate();
+export function Header({ onChange, cartItems }) {
 
     const { signOut } = useAuth();
 
@@ -32,7 +30,7 @@ export function Header({ onChange }) {
                 { sideBar && <Sidebar onChange={ onChange } active={setSideBar} /> } 
                 <Logo />
                 <HeaderSearch onChange={ onChange } />
-                <Cart />
+                <Cart cartItems={ cartItems } />
                 <LogoutButton onClick={ signOut } />
             </HeaderContent>
         </Container>

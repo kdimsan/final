@@ -12,7 +12,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.COLORS.DARK_700};
 
     animation-name: appearing;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-delay: 0.3s;
     animation-fill-mode: backwards;
 
