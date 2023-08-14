@@ -14,10 +14,19 @@ export function Home() {
     const [search, setSearch] = useState("");
     const [plates, setPlates] = useState([]);
     const [cartItems, setCartItems] = useState([]);
-
+   
     const addToCart = (item) => {
         setCartItems([...cartItems, item]);
     };
+
+    const platesByCategory = {};
+
+    plates.forEach((plate) => {
+        if(!platesByCategory[plate.category]) {
+            platesByCategory[plate.category] = [];
+        }
+        platesByCategory[plate.category].push(plate);
+  });
 
     useEffect(() => {
         async function fetchPlates() {
@@ -26,7 +35,7 @@ export function Home() {
         }
         fetchPlates();
     }, [search]);
-
+  
     return(
         <Container>
            <Header 
@@ -35,19 +44,21 @@ export function Home() {
             />
             <main>
             <Banner />
-            <h2>Refeições</h2>
-            <PlatesOrganizer>
-                {plates.map((plate) => (
-                    /* fazer o map para pegar todos os plates, e aí fazer um filter para pegar o plate.category e colocar 
-                    cada um em seu lugar de categoria. */
-                    <ProductCard
-                        key={String(plate.id)}
-                        data={plate}
-                        addToCart={ addToCart }
-                        cartItems={ cartItems }
-                    />
-                ))}
-            </PlatesOrganizer>
+            {Object.keys(platesByCategory).map((category) => (
+                <div key={category}>
+                    <h2>{category}</h2>
+                        <PlatesOrganizer>
+                            {platesByCategory[category].map((plate) => (
+                                
+                            <ProductCard
+                                key={String(plate.id)}
+                                data={plate}
+                                onClick={ () => handlePlateDetail(plate.id) }
+                            />
+                            ))}
+                        </PlatesOrganizer>
+                </div>
+            ))}
             </main>
             <Footer />
         </Container>

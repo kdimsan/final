@@ -10,7 +10,7 @@ import { api } from "../../../services/api";
 export function Dish() {
 
     const params = useParams();
-    const [data, setData] = useState();
+    const [data, setData] = useState(); 
 
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export function Dish() {
         }
         fetchPlate();
     },[]);
-
+    
     return(
         <Container>
             <BackButton />
@@ -33,7 +33,7 @@ export function Dish() {
                 data &&
                 <main>
                     <ProductImage>
-                        <img width={ 264 } height={ 264 } src="../../../../assets/product.png" alt="Foto do produto" />
+                        <img width={ 264 } height={ 264 } src={ `${api.defaults.baseURL}/files/${data.dish.image}` } alt="Foto do produto" />
                     </ProductImage>
                     <ProductInfo>
                         <h2>{data.dish.name}</h2>

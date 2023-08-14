@@ -27,7 +27,7 @@ export function Dish() {
                 data &&
                 <main>
                     <ProductImage>
-                        <img width={ 264 } height={ 264 } src="../../../../assets/product.png" alt="Foto do produto" />
+                        <img width={ 264 } height={ 264 } src={ `${api.defaults.baseURL}/files/${data.dish.image}` } alt="Foto do produto" />
                     </ProductImage>
                     <ProductInfo>
                         <h2>{data.dish.name}</h2>

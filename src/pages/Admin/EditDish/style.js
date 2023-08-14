@@ -134,15 +134,35 @@ export const Form = styled.div`
             }
         }
     }
-    
-        >button {
-            grid-area: i;
-            
-            @media(min-width: 770px) {
-                justify-self: end;
-                margin: 0 17px;
-            }
+    .action-buttons{
+        grid-area: i;
+
+        display: flex;
+        gap: 32px;
+
+        @media(min-width: 770px) {
+            gap: 0;
         }
+
+        >:first-child{
+            background-color: ${({theme}) => theme.COLORS.DARK_800};
+            border: none;
+            border-radius: 8px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: ${({theme}) => theme.COLORS.LIGHT_100}; ;
+        }
+        
+        >button {
+                width: 100%;
+                
+                @media(min-width: 770px) {
+                    justify-self: end;
+                    margin: 0 17px;
+                }
+            }
+    }
 `;
 
 export const ImageContainer = styled.label`

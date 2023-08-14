@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Container, Selector } from "./styles";
+
 import Minus from "../../../assets/minus.svg";
 import Plus from "../../../assets/plus.svg";
 import Favorite from "../../../assets/favorite.svg";
@@ -11,6 +12,8 @@ export function ProductCard({ data, addToCart, cartItems }) {
     const [itemQuantity, setItemQuantity] = useState(0);
 
     const navigate = useNavigate();
+
+    const imageUrl = `${api.defaults.baseURL}/files/${data.image}`;
 
     function handlePlateDetail() {
         navigate(`/pratos/${data.id}`, {state: cartItems});
@@ -34,7 +37,7 @@ export function ProductCard({ data, addToCart, cartItems }) {
     return(
         <Container>
             <div className="plate-infos" onClick={ handlePlateDetail }>
-                <img src="src/assets/product.png" alt="Foto do produto" />
+                <img src={ imageUrl } alt="Foto do produto" />
                 <h5 data={data.name}>{data.name}</h5>
                 <p data={data.description}>{data.description}</p>
                 <h4 data={data.price}>R${data.price}</h4>

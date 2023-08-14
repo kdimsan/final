@@ -10,8 +10,9 @@ export const Container = styled.div`
 
     >main {
         flex: 1;
-
-        > h2 {
+        
+        >div {
+            > h2 {
             font-family: 'Poppins', sans-serif;
             color: ${({theme}) => theme.COLORS.LIGHT_300};
             font-weight: 500;
@@ -40,6 +41,8 @@ export const Container = styled.div`
                 margin: 30px 124px 0;
             }
         }
+        }
+        
     }
 `;
  

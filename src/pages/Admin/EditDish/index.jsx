@@ -29,11 +29,11 @@ export function EditDish() {
             setTags( [...tags, { title: newTag }] );
             setNewTag("");
         }
-    }
+    };
 
     function handleRemoveTag(tagDeleted) {
         setTags(prevState => prevState.filter(tag => tag !== tagDeleted));
-    }
+    };
 
     async function handleUpdate() {
 
@@ -52,9 +52,18 @@ export function EditDish() {
             tags: tagsToSend
         }).then(() => {
             alert("Atualizado com sucesso.");
-            navigate(-1)
+            navigate(-1);
         });
     }
+
+    async function handleDeletePlate() {
+        const confirm = window.confirm("Deseja realmente excluir o prato?");
+
+        if(confirm){
+            await api.delete(`/pratos/${ params.id }`);
+            navigate("/");
+        }
+    };
     
     useEffect(() => {
         async function fetchPlate() {
@@ -158,7 +167,10 @@ export function EditDish() {
                             />
                         </DescriptionContainer>
 
+                        <div className="action-buttons">
+                        <button onClick={ () => handleDeletePlate() }>Excluir</button>
                         <SaveButton onClick={ () => handleUpdate() } title="Salvar prato"/>
+                        </div>
                     </Form>
                 </main>
             }

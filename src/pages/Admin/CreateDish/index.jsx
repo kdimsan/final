@@ -19,6 +19,8 @@ export function CreateDish() {
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
 
+    const [plateImageFile, setPlateImageFile] = useState();
+
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
 
@@ -56,13 +58,23 @@ export function CreateDish() {
     if(newTag) {
         return alert("Há ingredientes que não foram adicionados, favor clicar para adicionar.");
     }
-    await api.post("/pratos", {
+
+    if(!plateImageFile) {
+        return alert("Foto do prato é obrigatório.");
+    }
+
+    const fileUploadForm = new FormData();
+    fileUploadForm.append("image", plateImageFile);
+
+    const dishId = await api.post("/pratos", {
         name,
         category,
         price,
         description,
         ingredients: tags
     })
+
+    await api.patch(`/pratos/image/?dish_id=${ dishId.data }`, fileUploadForm)
     .then(() =>{
         alert("Prato criado com sucesso.")
         navigate("/")
@@ -74,6 +86,11 @@ export function CreateDish() {
             alert("Não foi possível realizar o cadastro.");
         }
      });
+    };
+
+    function handleChangeImage(e) {
+        const file = e.target.files[0];
+        setPlateImageFile(file);
     };
     
     return(
@@ -90,6 +107,7 @@ export function CreateDish() {
                             <input 
                                 type="file"
                                 id="image" 
+                                onChange={ handleChangeImage }
                             />
                             <span>Selecione imagem</span>
                         </ImageUploader>
