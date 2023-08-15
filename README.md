@@ -2,7 +2,7 @@
 <div align="center" >  
     <img src="./docs/assets/Logo FoodExplorer.png">
 </div>
-    Front-end do desafio final do curso **Explorer** da **Rocketseat**, sendo criado com react e estilizado com styled-components e conexão com o banco
+    Front-end do desafio final do curso Explorer da Rocketseat, sendo criado com ReactJS e estilizado com Styled-components e conexão com o banco
     de dados feito com Axios.
 
 <div align="center" >
