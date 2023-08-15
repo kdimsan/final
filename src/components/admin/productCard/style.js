@@ -73,6 +73,11 @@ export const InfoContainer = styled(Link)`
             width: 88px;
 
             margin: 24px 0 12px;
+            
+            @media(min-width: 1200px) {
+                height: 115px;
+                width: 115px;
+            }
         }
 
     > h5 {

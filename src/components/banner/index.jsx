@@ -1,6 +1,6 @@
 import { Container , BannerText} from "./style";
 
-import bannerImageDesktop from "../../assets/macaroonsDesktop.png";
+import bannerImageDesktop from "../../assets/BannerImage.png";
 import bannerImage from "../../assets/macaroons.png";
 
 export function Banner() {

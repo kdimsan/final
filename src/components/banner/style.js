@@ -54,7 +54,7 @@ export const Container = styled.div`
         height: 260px;
     } 
 
-    > img:nth-child(1) { 
+    > img:nth-child(2) { 
         grid-area: a;
 
         width: 230px;
@@ -85,7 +85,7 @@ export const Container = styled.div`
         }
     }
 
-    >img:nth-child(2) {
+    >img:nth-child(1) {
        display: none;
 
        animation-name: topdown;

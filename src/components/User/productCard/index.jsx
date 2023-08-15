@@ -52,7 +52,6 @@ export function ProductCard({ data, addToCart, cartItems }) {
             </Selector>
             <button onClick={ handleAddToCart } >Incluir</button>
             <img src={ Favorite } alt="Adicionar aos favoritos" />
-
         </Container>
     )
 }

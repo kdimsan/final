@@ -23,6 +23,7 @@ export const Container = styled.div`
 
         @media(min-width: 770px) {
             flex-direction: row;
+            gap: 80px;
 
             min-height: 50vh;
         }
@@ -30,8 +31,14 @@ export const Container = styled.div`
 `;
 
 export const ProductImage = styled.div`
-    @media(min-width: 770px) {
-        margin-right: 30px;
+    >img {
+        width: 264px;
+        height: 264px;
+
+        @media(min-width: 1200px) {
+            width: 320px;
+            height: 320px;
+        }
     }
 `;
 
