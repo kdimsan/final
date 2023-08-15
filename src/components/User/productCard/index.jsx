@@ -21,7 +21,7 @@ export function ProductCard({ data, addToCart, cartItems }) {
         navigate(`/pratos/${data.id}`, {state: cartItems});
       }
 
-    const changeQuantity = (e) => {
+    function changeQuantity(e) {
         if(e === "sum") {
             setItemQuantity(itemQuantity + 1)
         } else if (e === "subtraction" && itemQuantity > 0 ) {
@@ -29,7 +29,7 @@ export function ProductCard({ data, addToCart, cartItems }) {
         }
     };
 
-    const handleAddToCart = () => {
+    function handleAddToCart() {
         addToCart({
             name: data.name,
             quantity: itemQuantity,

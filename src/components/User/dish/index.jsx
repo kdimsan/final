@@ -18,7 +18,7 @@ export function Dish() {
     const [data, setData] = useState();
     const [itemQuantity, setItemQuantity] = useState(0);
 
-    const changeQuantity = (e) => {
+    function changeQuantity(e) {
         if(e === "sum") {
             setItemQuantity(itemQuantity + 1)
         } else if (e === "subtraction" && itemQuantity > 0 ) {
