@@ -21,7 +21,7 @@ export const Container = styled.div`
 
                 animation-name: appearing;
                 animation-duration: 2s;
-                animation-delay: 1.5s;
+                animation-delay: .3s;
                 animation-fill-mode: backwards;
 
                 @media(min-width: 400px) {

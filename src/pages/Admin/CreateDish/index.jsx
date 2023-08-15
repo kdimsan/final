@@ -130,9 +130,9 @@ export function CreateDish() {
                             onChange={e => setCategory(e.target.value)} 
                             id="options">
                                 <option value=""></option>
-                                <option value="meal">Refeição</option>
-                                <option value="main plate">Prato principal</option>
-                                <option value="drink">Bebidas</option>
+                                <option value="Refeições">Refeição</option>
+                                <option value="Sobremesas">Sobremesa</option>
+                                <option value="Bebidas">Bebidas</option>
                         </select>
                     </CategoryContainer>
 

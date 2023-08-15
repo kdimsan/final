@@ -72,7 +72,7 @@ export const Container = styled.div`
             
             animation-name: appearing;
             animation-duration: 2s;
-            animation-delay: 3.5s;
+            animation-delay: 1.5s;
             animation-fill-mode: backwards;
         }
 
@@ -90,7 +90,7 @@ export const Container = styled.div`
 
        animation-name: topdown;
        animation-duration: 2s;
-       animation-delay: 1.8s;
+       animation-delay: 1.5s;
        animation-fill-mode: backwards;
         
        @media(min-width: 770px) {
@@ -189,7 +189,7 @@ export const BannerText = styled.div`
             transform: translateX(-40px);
         }
         100%{
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 

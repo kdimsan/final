@@ -12,14 +12,12 @@ export const Container = styled.div`
 
     animation-name: appearing;
     animation-duration: 1s;
-    animation-delay: 0.3s;
     animation-fill-mode: backwards;
 
     @keyframes appearing {
         0% {
             filter: opacity(0);
         }
-
         100% {
             filter: opacity(1);
         }
@@ -88,4 +86,5 @@ export const HeaderContent = styled.div`
             display: none;
         }
     }
+
 `;

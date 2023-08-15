@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     flex: 1;
+
+    animation: appearing 1.5s;
     
    @media(min-width: 770px) {
         margin: 0 60px;

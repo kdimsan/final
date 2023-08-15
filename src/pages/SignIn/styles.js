@@ -8,12 +8,22 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    animation: appearing 1s;
+
     @media(min-width: 770px) {
         display: flex;
         flex-direction: row;
         align-items: center;
         
        justify-content: space-around;
+    }
+    @keyframes appearing {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 `;
 

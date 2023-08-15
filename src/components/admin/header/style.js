@@ -13,7 +13,6 @@ export const Container = styled.div`
 
     animation-name: appearing;
     animation-duration: 1.5s;
-    animation-delay: 0.3s;
     animation-fill-mode: backwards;
 
     @keyframes appearing {

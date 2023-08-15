@@ -20,8 +20,8 @@ export const Container = styled.div`
     border: 1px solid ${({theme}) => theme.COLORS.DARK_300};
 
     animation-name: appearing; 
-    animation-duration: 2s;
-    animation-delay: 2s;
+    animation-duration: 1.2s;
+    animation-delay: .5s;
     animation-fill-mode: backwards;
 
     @media(min-width: 400px) {
