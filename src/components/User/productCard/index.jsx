@@ -7,6 +7,8 @@ import Minus from "../../../assets/minus.svg";
 import Plus from "../../../assets/plus.svg";
 import Favorite from "../../../assets/favorite.svg";
 
+import { api } from "../../../services/api";
+
 export function ProductCard({ data, addToCart, cartItems }) {
 
     const [itemQuantity, setItemQuantity] = useState(0);

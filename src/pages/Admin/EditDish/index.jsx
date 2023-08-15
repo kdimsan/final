@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { api } from "../../../services/api";
 import { useParams, useNavigate } from "react-router-dom";
 
 import { Container, Form, ImageContainer, ImageUploader, NameContainer, CategoryContainer, IngredientsContainer, PriceContainer, DescriptionContainer } from "./style";
@@ -12,6 +11,8 @@ import { BackButton } from "../../../components/backButton";
 
 import Upload from "../../../assets/upload.svg";
 
+import { api } from "../../../services/api";
+
 export function EditDish() {
 
     const [data, setData] = useState();
@@ -20,8 +21,11 @@ export function EditDish() {
 
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
-    
+
+    const [newPlateImage, setNewPlateImage] = useState();
+
     const params = useParams();
+    
     const navigate = useNavigate();
 
     function handleAddTag() {
@@ -34,6 +38,11 @@ export function EditDish() {
     function handleRemoveTag(tagDeleted) {
         setTags(prevState => prevState.filter(tag => tag !== tagDeleted));
     };
+
+    function handleChangeImage(e) {
+        const imageFile = e.target.files[0];
+        setNewPlateImage(imageFile);
+    }
 
     async function handleUpdate() {
 
@@ -50,11 +59,18 @@ export function EditDish() {
             price: dish.price,
             description: dish.description,
             tags: tagsToSend
-        }).then(() => {
-            alert("Atualizado com sucesso.");
-            navigate(-1);
         });
-    }
+        if(newPlateImage) {
+            const fileUploadForm = new FormData();
+            fileUploadForm.append("image", newPlateImage);
+
+            await api.patch(`/pratos/image/?dish_id=${ dish.id }`, fileUploadForm)
+            .then(() => {
+                alert("Atualizado com sucesso.");
+                navigate(-1);
+            });
+        }; 
+    };
 
     async function handleDeletePlate() {
         const confirm = window.confirm("Deseja realmente excluir o prato?");
@@ -93,6 +109,7 @@ export function EditDish() {
                                 <input 
                                     type="file"
                                     id="image" 
+                                    onChange={ handleChangeImage } 
                                 />
                                 <span>Selecione imagem</span>
                             </ImageUploader>

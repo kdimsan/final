@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
     display: flex;
+
     position: relative;
 
     @media(min-width: 770px) {
@@ -78,8 +78,6 @@ export const Container = styled.div`
             font-size: 14px;
             color: ${({theme}) => theme.COLORS.LIGHT_100};
             white-space: nowrap;
-
         }
     }
-    
 `;

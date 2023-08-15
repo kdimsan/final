@@ -1,16 +1,30 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import { Container, ProductImage, ProductInfo, IngredientsOrganizer } from "./style";
+import { Container, ProductImage, ProductInfo, IngredientsOrganizer, Selector } from "./style";
 
 import { BackButton } from "../../backButton";
+import { IncludeButton } from "../../includeButton";
 
-import { useParams } from "react-router-dom";
+import Minus from "../../../assets/minus.svg";
+import Plus from "../../../assets/plus.svg";
+
 import { api } from "../../../services/api";
 
 export function Dish() {
 
     const params = useParams();
+
     const [data, setData] = useState();
+    const [itemQuantity, setItemQuantity] = useState(0);
+
+    const changeQuantity = (e) => {
+        if(e === "sum") {
+            setItemQuantity(itemQuantity + 1)
+        } else if (e === "subtraction" && itemQuantity > 0 ) {
+            setItemQuantity(itemQuantity - 1)
+        }
+    };
 
     useEffect(() => {
         async function fetchPlate() {
@@ -45,6 +59,12 @@ export function Dish() {
                             }
                         </IngredientsOrganizer>
                         }
+                        <Selector>
+                            <button onClick={ () => changeQuantity("subtraction") }> <img src={ Minus } alt="Diminuir quantidade do produto" /> </button>
+                            <span>{itemQuantity}</span>
+                            <button onClick={ () => changeQuantity("sum") }> <img src={ Plus } alt="Adicionar produto" /> </button>
+                            <IncludeButton data={ data } title={"Incluir"} />
+                        </Selector>
                     </ProductInfo>
                 </main>
             }

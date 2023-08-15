@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.button`
     
-    padding: 12px 24px;
+    padding: 10px 40px;
 
+    gap: 10px;
+        
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
     color: ${({theme}) => theme.COLORS.LIGHT_100};
-
-    background-color: ${({theme}) => theme.COLORS.TOMATO_400};
-    border: none;
+        
     border-radius: 8px;
+    background-color: ${({theme}) => theme.COLORS.TOMATO_100};
 
     cursor: pointer;
 
@@ -18,5 +18,5 @@ export const Container = styled.button`
 
     :hover {
         filter: opacity(0.7);
-}
+    }
 `;

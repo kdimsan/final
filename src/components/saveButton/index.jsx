@@ -1,8 +1,8 @@
-import { Container } from "./style"
+import { Container } from "./style";
 
-export function SaveButton({ title, onClick}) {
+export function SaveButton({ title, onClick }) {
     return(
-        <Container onClick={onClick}>
+        <Container onClick={ onClick }>
             <span>{ title }</span>
         </Container>
     )

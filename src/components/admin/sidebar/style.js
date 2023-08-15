@@ -34,7 +34,6 @@ export const Container = styled.div`
 `;
 
 export const SidebarHeader = styled.div`
-
     height: 114px;
 
     display: flex;

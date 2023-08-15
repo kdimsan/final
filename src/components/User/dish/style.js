@@ -63,20 +63,24 @@ export const ProductInfo = styled.div`
 
         @media(min-width: 770px) {
             font-size: 20px;
+
             margin: 0 0 40px;
         }
         @media(min-width: 1200px) {
             font-size: 22px;
+
             margin: 0 0 60px;
         }
     }
 
     >button {
         width: 100%;
+
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
+
         padding: 12px 24px;
 
         background-color: ${({theme}) => theme.COLORS.TOMATO_100};
@@ -87,7 +91,9 @@ export const ProductInfo = styled.div`
         font-size: 12px;
         font-weight: 500;
         color: ${({theme}) => theme.COLORS.LIGHT_100};
+
         cursor: pointer;
+
         @media(min-width: 770px) {
             font-size: 16px;
         }
@@ -109,6 +115,7 @@ export const IngredientsOrganizer = styled.div`
 
     @media(min-width: 770px) {
         justify-content: start;
+
         margin-bottom: 30px;
     }
     >span {
@@ -140,7 +147,17 @@ export const Selector = styled.div`
     @media(min-width: 770px) {
         justify-content: start;
     }
-   
+
+    >:last-child{
+        padding: 10px 40px;
+        
+        font-family: 'Poppins', sans-serif;
+        color: ${({theme}) => theme.COLORS.LIGHT_100};
+        
+        border-radius: 8px;
+        background-color: ${({theme}) => theme.COLORS.TOMATO_100};
+        }
+
     > button {
         cursor: pointer;
         display: flex;

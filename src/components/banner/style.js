@@ -17,7 +17,6 @@ export const Container = styled.div`
     animation-fill-mode: backwards;
 
     @media(max-width: 319px) {
-        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -45,21 +44,26 @@ export const Container = styled.div`
 
     @media(min-width: 1024px) {
         margin: 164px 100px 31px ;
+
         height: 230px;
     }
 
     @media(min-width: 1300px) {
         margin: 164px 124px 31px;
+
         height: 260px;
     } 
 
     > img:nth-child(1) { 
         grid-area: a;
+
+        width: 230px;
+        height: 148px;
+
         position: relative;
         top: -29px;
         left: -15px;
-        width: 230px;
-        height: 148px;
+        
 
         @media(max-width: 319px) {
             position: absolute ;
@@ -91,25 +95,29 @@ export const Container = styled.div`
         
        @media(min-width: 770px) {
             display: inline;
-            position: relative;
+
             width: 400px;
+            height: 256px;
+
+            position: relative;
             top: -56px;
             left: -35px;
-            height: 256px;
        }
 
        @media(min-width: 1024px) {
             width: 483px;
+            height: 376px;
+
             top: -146px;
             left: -47px;
-            height: 376px;
        }
 
        @media(min-width: 1300px) {
             width: 630px;
+            height: 406px;
+            
             top: -146px;
             left: -55px;
-            height: 406px;
        }
        
     }  
@@ -147,19 +155,16 @@ export const BannerText = styled.div`
             font-size: clamp(16px, 5vw, 28px);
         }
 
-        @media(min-width: 320px) {
-            
+        @media(min-width: 320px) { 
             font-size: clamp(14px, 4vw, 24px);
         }
 
         @media(min-width: 425px) {
-            
             font-size: clamp(18px, 4vw, 24px);
         }
 
         @media(min-width: 1024px) {
             font-size: clamp(20px, 3vw, 46px);
-
         }
     }
 
@@ -170,17 +175,11 @@ export const BannerText = styled.div`
         line-height: 18px;
         color: ${({theme}) => theme.COLORS.LIGHT_300};
 
-        @media(min-width: 320px) {
-           
-        }
-
-        @media(min-width: 425px) {
-            
+        @media(min-width: 425px) {   
             font-size: clamp(14px, 2vw, 20px);
         }
 
         @media(min-width: 1300px) {
-            
             font-size: clamp(14px, 2vw, 16px);
         }
     }

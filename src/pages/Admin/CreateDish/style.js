@@ -127,12 +127,9 @@ export const Form = styled.div`
             background-color: ${({theme}) => theme.COLORS.DARK_800};
 
             font-family: 'Roboto', sans-serif;
+            color: ${({theme}) => theme.COLORS.LIGHT_100};
 
             resize: none;
-            
-            :focus {
-                color: ${({theme}) => theme.COLORS.LIGHT_100};
-            }
         }
     }
     
@@ -148,7 +145,6 @@ export const Form = styled.div`
 
 export const ImageContainer = styled.label`
     grid-area: a;
-
 `;
 
 export const ImageUploader = styled.div`

@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import { Container, Form } from "./styles";
+
 import { Logo } from "../../components/logo";
+
 import { api } from "../../services/api";
 
 export function SignUp() { 

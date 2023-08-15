@@ -73,7 +73,6 @@ export const HeaderContent = styled.div`
             width: 28px;
         }
 
-        /*------------- DESKTOP -------------- */
         @media(min-width: 770px) {
             display: none;
         }

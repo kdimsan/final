@@ -55,7 +55,6 @@ export function Dish() {
                     </ProductInfo>
                 </main>
             }
-
         </Container>
     )
 }

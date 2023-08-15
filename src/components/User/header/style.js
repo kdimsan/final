@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
     width: 100%;
     height: 114px;
     
@@ -73,7 +72,6 @@ export const HeaderContent = styled.div`
             width: 28px;
         }
 
-        /*------------- DESKTOP -------------- */
         @media(min-width: 770px) {
             display: none;
         }
@@ -90,5 +88,4 @@ export const HeaderContent = styled.div`
             display: none;
         }
     }
-
 `;

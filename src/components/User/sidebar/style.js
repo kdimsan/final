@@ -30,11 +30,9 @@ export const Container = styled.div`
             width: 100%;
         }
     }
-
 `;
 
 export const SidebarHeader = styled.div`
-
     height: 114px;
 
     display: flex;
@@ -56,15 +54,14 @@ export const SidebarHeader = styled.div`
 `;
 
 export const Content = styled.div`
-    
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        gap: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
 
-        margin: 36px 28px;
+    margin: 36px 28px;
 
-        >div {
-            margin-bottom: 30px;
-        }
+    >div {
+        margin-bottom: 30px;
+    }
 `;

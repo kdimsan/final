@@ -23,4 +23,4 @@ export default {
        TOMATO_400: "#AB4D55",
        CAKE_200: "#82F3FF",
     }
-}
+};

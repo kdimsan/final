@@ -29,9 +29,10 @@ export const Container = styled.div`
 export const Divisor = styled.div`
     display: flex;
     align-items: center;
-    white-space: nowrap;
     gap: 8px;
-    /*------------- DESKTOP -------------- */
+
+    white-space: nowrap;
+
     @media(min-width: 770px) {
         margin: 0;
     }
@@ -50,7 +51,6 @@ export const Divisor = styled.div`
             font-size: 24px;
         }
 
-        /*------------- DESKTOP -------------- */
         @media(min-width: 770px) {
             font-size: 20px;
         }
@@ -69,7 +69,6 @@ export const Divisor = styled.div`
             width: 36px;
         }
 
-        /*------------- DESKTOP -------------- */
         @media(min-width: 770px) {
             height: 30px;
             width: 30px;

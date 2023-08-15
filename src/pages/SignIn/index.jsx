@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { useAuth } from "../../hooks/auth";
 import { useNavigate } from "react-router-dom";
 
 import { Container, Form } from "./styles";
 import { Logo } from "../../components/logo";
-import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks/auth";
 
 
 export function SignIn() { 
@@ -26,7 +25,9 @@ export function SignIn() {
 
     return(
         <Container>
+
             <Logo />
+            
             <Form >
                 <h2>Faça Login</h2>
 

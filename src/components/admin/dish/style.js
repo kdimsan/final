@@ -6,6 +6,7 @@ export const Container = styled.div`
    @media(min-width: 770px) {
         margin: 0 60px;
     }
+
     @media(min-width: 900px) {
         margin: 0 100px;
     }
@@ -20,6 +21,7 @@ export const Container = styled.div`
 
         @media(min-width: 770px) {
             flex-direction: row;
+
             min-height: 50vh;
         }
     }
@@ -63,10 +65,12 @@ export const ProductInfo = styled.div`
 
         @media(min-width: 770px) {
             font-size: 20px;
+
             margin: 0 0 40px;
         }
         @media(min-width: 1200px) {
             font-size: 22px;
+
             margin: 0 0 60px;
         }
     }
@@ -77,17 +81,20 @@ export const ProductInfo = styled.div`
         align-items: center;
         justify-content: center;
         gap: 10px;
+
         padding: 12px 24px;
+        
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: ${({theme}) => theme.COLORS.LIGHT_100};
 
         background-color: ${({theme}) => theme.COLORS.TOMATO_100};
         border-radius: 5px;
         border: none;
 
-        font-family: 'Poppins', sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        color: ${({theme}) => theme.COLORS.LIGHT_100};
         cursor: pointer;
+
         @media(min-width: 770px) {
             font-size: 16px;
         }
@@ -109,6 +116,7 @@ export const IngredientsOrganizer = styled.div`
 
     @media(min-width: 770px) {
         justify-content: start;
+
         margin-bottom: 30px;
     }
     >span {
@@ -141,15 +149,16 @@ export const Selector = styled.div`
         justify-content: start;
     }
    
-    > button {
-        cursor: pointer;
+    >button {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 10px;
-
+        
         background: none;
         border: none;
+        
+        cursor: pointer;
 
         > img {
             width: 22px;

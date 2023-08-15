@@ -54,6 +54,8 @@ export function Home() {
                                 key={String(plate.id)}
                                 data={plate}
                                 onClick={ () => handlePlateDetail(plate.id) }
+                                addToCart={ addToCart }
+                                cartItems={ cartItems }
                             />
                             ))}
                         </PlatesOrganizer>

@@ -40,19 +40,19 @@ export function CreateDish() {
 
    async function handlePlateCreate() {
     if(!name) {
-        return alert("Campo nome vazio, favor preencha.")
+        return alert("Campo nome vazio, favor preencha.");
     }
     if(!category) {
-        return alert("Favor selecionar uma categoria ao prato.")
+        return alert("Favor selecionar uma categoria ao prato.");
     }
     if(!price) {
-        return alert("Favor digitar o valor do prato.")
+        return alert("Favor digitar o valor do prato.");
     }
     if(!description) {
-        return alert("Favor adicionar uma descrição ao prato.")
+        return alert("Favor adicionar uma descrição ao prato.");
     }
     if(!tags) {
-        return alert("Indique, ao menos, um ingrediente do prato.")
+        return alert("Indique, ao menos, um ingrediente do prato.");
     }
 
     if(newTag) {
@@ -100,6 +100,7 @@ export function CreateDish() {
                 <BackButton />
                 <h1>Novo prato</h1>
                 <Form>
+                    
                     <ImageContainer htmlFor="image">
                         <span>Imagem do prato</span>
                         <ImageUploader>
@@ -177,6 +178,7 @@ export function CreateDish() {
                             onChange={e => setDescription(e.target.value)}
                         />
                     </DescriptionContainer>
+
                 <SaveButton onClick={handlePlateCreate} title="Salvar prato"/>
                 </Form>
             </main>

@@ -21,6 +21,7 @@ export const Container = styled.div`
 
     @media(min-width: 770px) {
         justify-content: space-around;
+
         margin-top: 60px;
     }
 
@@ -29,8 +30,6 @@ export const Container = styled.div`
         font-size: clamp(10px, 3vw, 18px);
         color: ${({theme}) => theme.COLORS.LIGHT_200};
         text-align: center;
-
-        
     }
 
 
@@ -66,7 +65,6 @@ export const Logo = styled.div`
         font-family: 'Roboto', sans-serif;
         font-size: clamp(14px, 3vw, 24px);
         color: ${({theme}) => theme.COLORS.LIGHT_700};
-        white-space: nowrap;
-        
+        white-space: nowrap; 
     }
 `

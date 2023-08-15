@@ -28,7 +28,7 @@ export const Container = styled.div`
         @media(min-width: 1200px) {
             max-width: 120px;
         }
-    }
+    };
 
     >button {
         background: none;
@@ -42,6 +42,6 @@ export const Container = styled.div`
             width: 8px;
             height: 8px;
         }
-    }
+    };
 `;
 

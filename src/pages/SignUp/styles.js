@@ -7,7 +7,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
 
     @media(min-width: 770px) {
         display: flex;
@@ -25,10 +24,10 @@ export const Form = styled.form`
     padding: 20px 40px ;
 
     @media(min-width: 770px) {
+        padding: 40px;
+
         background-color:${({theme}) => theme.COLORS.DARK_700};
         border-radius: 10px; 
-
-        padding: 40px;
     }
 
     @media(min-width: 1200px) {
@@ -37,7 +36,7 @@ export const Form = styled.form`
 
     >h2 {
         display: none;
-
+        color: ${({theme}) => theme.COLORS.LIGHT_100};
         @media(min-width: 770px) {
             display: flex;
 
@@ -50,6 +49,7 @@ export const Form = styled.form`
 
         @media(min-width: 1200px) {
             font-size: 32px;
+            
             margin-bottom: 32px;
         }
     }

@@ -44,6 +44,7 @@ export const Container = styled.a`
 
         @media(min-width: 2200px) {
             height: 60px;
+            
             font-size:18px;
         }
     }

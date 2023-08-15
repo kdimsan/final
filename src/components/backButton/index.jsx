@@ -1,7 +1,7 @@
 import { Container } from "./style";
 import { useNavigate } from "react-router-dom";
 
-import back from "../../assets/back.svg"
+import back from "../../assets/back.svg";
 
 export function BackButton() {
 

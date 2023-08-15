@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-
     background: none;
     border: none;
-
 
     >img {
         @media(max-width: 769px) {
@@ -13,6 +11,7 @@ export const Container = styled.button`
 
         @media(min-width: 770px) {
             display: flex;
+            
             width: 22px;
             height: 22px; 
             

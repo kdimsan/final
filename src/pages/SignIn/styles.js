@@ -7,7 +7,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
 
     @media(min-width: 770px) {
         display: flex;
@@ -22,13 +21,13 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
 
-    padding: 20px 40px ;
+    padding: 20px 40px;
 
     @media(min-width: 770px) {
+        padding: 40px;
+
         background-color:${({theme}) => theme.COLORS.DARK_700};
         border-radius: 10px; 
-
-        padding: 40px;
     }
 
     @media(min-width: 1200px) {
@@ -46,10 +45,12 @@ export const Form = styled.form`
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
             line-height: 44.8px;
+            color: ${({theme}) => theme.COLORS.LIGHT_100};
         }
 
         @media(min-width: 1200px) {
             font-size: 32px;
+            
             margin-bottom: 32px;
         }
     }

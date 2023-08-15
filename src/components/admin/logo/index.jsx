@@ -1,6 +1,6 @@
-import { Container, Divisor } from "./style"
+import { Container, Divisor } from "./style";
 
-import logo from "../../../assets/logo.svg"
+import logo from "../../../assets/logo.svg";
 
 export function Logo() {
     return(

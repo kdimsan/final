@@ -13,7 +13,6 @@ export const Container = styled.div`
     min-width: 190px;
     height: 310px;
 
-
     background-color: ${({theme}) => theme.COLORS.DARK_200};
     border-radius: 8px;
     border: 1px solid ${({theme}) => theme.COLORS.DARK_300};

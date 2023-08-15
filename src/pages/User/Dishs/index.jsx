@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 
 import { Container } from "./style";
+
 import { Header } from "../../../components/User/header";
 import { Footer } from "../../../components/footer";
 import { Dish } from "../../../components/User/dish";
