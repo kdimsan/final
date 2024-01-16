@@ -1,6 +1,4 @@
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useAuth } from "../../../hooks/auth";
 
 import { Container, HeaderContent } from "./style";
 
@@ -12,33 +10,27 @@ import { HeaderSearch } from "../../headerSearch";
 
 import Menu from "../../../assets/menu.svg";
 
-
 export function Header({ onChange }) {
+  const [sideBar, setSideBar] = useState(false);
 
-    const navigate = useNavigate();
+  function showSideBar() {
+    setSideBar(!sideBar);
+  }
 
-    const { signOut } = useAuth();
+  function handleCreateDish() {
+    navigate("/pratos");
+  }
 
-    const [sideBar, setSideBar] = useState(false);
-
-    function showSideBar() {
-        setSideBar(!sideBar);
-    }
-
-    function handleCreateDish() {
-        navigate("/pratos");
-    }
-
-    return(
-        <Container> 
-            <HeaderContent>
-                <img onClick={ () => showSideBar() } src={ Menu } alt="Menu" />
-                { sideBar && <Sidebar onChange={ onChange } active={setSideBar} /> } 
-                <Logo />
-                <HeaderSearch onChange={ onChange } />
-                <NewDishButton title="Novo prato" onClick={ () => handleCreateDish() } />
-                <LogoutButton onClick={ signOut } />
-            </HeaderContent>
-        </Container>
-    )
+  return (
+    <Container>
+      <HeaderContent>
+        <img onClick={() => showSideBar()} src={Menu} alt="Menu" />
+        {sideBar && <Sidebar onChange={onChange} active={setSideBar} />}
+        <Logo />
+        <HeaderSearch onChange={onChange} />
+        <NewDishButton title="Novo prato" onClick={() => handleCreateDish()} />
+        <LogoutButton />
+      </HeaderContent>
+    </Container>
+  );
 }
